@@ -73,7 +73,7 @@
 
 
 - GET All Bookings: 
-
+```
 -- URI : `http://{host:port}/v1/bfs/booking`
 -- Response : [
                 {
@@ -96,3 +96,5 @@
                     }
                 }
             ]
+
+```
