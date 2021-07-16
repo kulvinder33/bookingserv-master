@@ -28,10 +28,10 @@
     - URI : `http://{host:port}/v1/bfs/idempotencytoken`
     - Response : 
 ```
-{
-    "uuid": "cc1228f1-2983-4fa9-832d-77861252c1121626468107415",
-    "bookingId": null
-}
+    {
+        "uuid": "cc1228f1-2983-4fa9-832d-77861252c1121626468107415",
+        "bookingId": null
+    }
 ```
 
 - POST new Booking : 
@@ -40,56 +40,29 @@
     - Headers : `Idempotency-Key` : `cc1228f1-2983-4fa9-832d-77861252c1121626468107415` (UUID from above requests response)
     - Request Body : 
 ```
-{
-    "first_name" : "kulvinder",
-    "last_name" : "singh",
-    "date_of_birth" : "1994-10-10",
-    "checkin" : "2020-12-20",
-    "checkout" : "2020-12-21",
-    "total_price" : 1000,
-    "deposit" : 500,
-    "address" : {
-        "line1" : "h.no. 774",
-        "line2" : "sector - 16",
-        "city" : "karnal",
-        "state" : "haryana",
-        "country" : "India",
-        "zip_code" : 132001
+    {
+        "first_name" : "kulvinder",
+        "last_name" : "singh",
+        "date_of_birth" : "1994-10-10",
+        "checkin" : "2020-12-20",
+        "checkout" : "2020-12-21",
+        "total_price" : 1000,
+        "deposit" : 500,
+        "address" : {
+            "line1" : "h.no. 774",
+            "line2" : "sector - 16",
+            "city" : "karnal",
+            "state" : "haryana",
+            "country" : "India",
+            "zip_code" : 132001
+        }
     }
-}
 
 ```
 
     - Response : 
 
 ```
-{
-    "id": 2,
-    "first_name": "kulvinder",
-    "last_name": "singh",
-    "date_of_birth": "1994-10-10",
-    "checkin": "2020-12-20",
-    "checkout": "2020-12-21",
-    "total_price": 1000,
-    "deposit": 500,
-    "address": {
-        "line1": "h.no. 774",
-        "line2": "sector - 16",
-        "city": "karnal",
-        "state": "haryana",
-        "country": "India",
-        "zip_code": 132001,
-        "id": 2
-    }
-}
-```
-
-- GET All Bookings: 
-
-    - URI : `http://{host:port}/v1/bfs/booking`
-    - Response : 
-```
-[
     {
         "id": 2,
         "first_name": "kulvinder",
@@ -109,6 +82,33 @@
             "id": 2
         }
     }
-]
+```
+
+- GET All Bookings: 
+
+    - URI : `http://{host:port}/v1/bfs/booking`
+    - Response : 
+```
+    [
+        {
+            "id": 2,
+            "first_name": "kulvinder",
+            "last_name": "singh",
+            "date_of_birth": "1994-10-10",
+            "checkin": "2020-12-20",
+            "checkout": "2020-12-21",
+            "total_price": 1000,
+            "deposit": 500,
+            "address": {
+                "line1": "h.no. 774",
+                "line2": "sector - 16",
+                "city": "karnal",
+                "state": "haryana",
+                "country": "India",
+                "zip_code": 132001,
+                "id": 2
+            }
+        }
+    ]
 
 ```
