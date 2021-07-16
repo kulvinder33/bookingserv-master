@@ -24,15 +24,18 @@
 ### Sample resource requests and responses : 
 
 - GET new token : 
---  URI : `http://{host:port}/v1/bfs/idempotencytoken`
+```
+--  URI : http://{host:port}/v1/bfs/idempotencytoken
 --  Response : {
                     "uuid": "cc1228f1-2983-4fa9-832d-77861252c1121626468107415",
                     "bookingId": null
                 }
+```
 
 - POST new Booking : 
--- URI : `http://{host:port}/v1/bfs/booking`
--- Headers : `Idempotency-Key` : `cc1228f1-2983-4fa9-832d-77861252c1121626468107415` (UUID from above requests response)
+```
+-- URI : http://{host:port}/v1/bfs/booking
+-- Headers : Idempotency-Key : cc1228f1-2983-4fa9-832d-77861252c1121626468107415 (UUID from above requests response)
 -- Request Body : {
                     "first_name" : "kulvinder",
                     "last_name" : "singh",
@@ -70,11 +73,11 @@
                     "id": 2
                 }
             }
-
+```
 
 - GET All Bookings: 
 ```
--- URI : `http://{host:port}/v1/bfs/booking`
+-- URI : http://{host:port}/v1/bfs/booking
 -- Response : [
                 {
                     "id": 2,
