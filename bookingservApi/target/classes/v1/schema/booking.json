@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",  
+  "title": "Booking resource",
+  "description": "Booking resource object",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Booking id",
+      "type": "integer"
+    },
+    "first_name": {
+      "description": "First name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "last_name": {
+      "description": "Last name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "date_of_birth" : {
+		"description" : "Date Of Birth",
+		"type" : "string",
+		"format" : "date-time",
+		"customDateTimePattern" : "yyyy-MM-dd"
+	},
+	"checkin" : {
+		"description" : "Check In",
+		"type" : "string",
+		"format" : "date-time",
+		"customDateTimePattern" : "yyyy-MM-dd"
+	},
+	"checkout" : {
+		"description" : "Checkout",
+		"type" : "string",
+		"format" : "date-time",
+		"customDateTimePattern" : "yyyy-MM-dd"
+	},
+	"total_price" : {
+		"description" : "Total Price Amount",
+		"type" : "integer"
+	},
+	"deposit" : {
+		"description" : "Deposited Amount",
+		"type" : "integer"
+	},
+    "address" : {
+		"description" : "Address",
+		"type" : "object",
+		"properties" : {
+			"line1" : {
+				"description" : "Line 1 of Address",
+				"type" :  "string"
+			},
+			"line2" : {
+				"description" : "Line 2 of Address",
+				"type" : "string"
+			},
+			"city" : {
+				"description" : "City Name",
+				"type" : "string"
+			},
+			"state" : {
+				"description" : "State Name",
+				"type" : "string"
+			},
+			"country" : {
+				"description" : "Country Name",
+				"type" : "string"
+			},
+			"zip_code" : {
+				"description" : "Line 2 of Address",
+				"type" : "integer"
+			}
+		},
+		"required" : [
+			"line1",
+			"city",
+			"state",
+			"country",
+			"zip_code"
+		]
+	}
+  },
+  "required": [
+    "first_name",
+    "last_name",
+    "date_of_birth",
+    "checkin",
+    "checkout",
+    "total_price",
+    "deposit",
+    "address"
+  ]
+}

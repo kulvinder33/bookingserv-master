@@ -1,0 +1,7 @@
+com\paypal\bfs\test\bookingserv\service\IdempotenceTokenServiceTest.class
+com\paypal\bfs\test\bookingserv\utils\MockDataGeneratorUtility.class
+com\paypal\bfs\test\bookingserv\mapper\EntityRequestMapperTest.class
+com\paypal\bfs\test\bookingserv\config\BookingAppConfigurationTest.class
+com\paypal\bfs\test\bookingserv\service\BookingServiceTest.class
+com\paypal\bfs\test\bookingserv\impl\BookingResourceImplTest.class
+com\paypal\bfs\test\bookingserv\exceptionhandler\GlobalExceptionHandlerTest.class
